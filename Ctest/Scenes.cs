@@ -9,9 +9,10 @@ namespace Ctest.Scenes
     public string id {get; set;}
 
     public string name { get; set; }
+    [DocumentProperty(Identifier = IdentifierType.Key)]
     public string address { get; set; }
 
-    [DocumentProperty(Identifier = IdentifierType.Key)]
+    
     public string Key{ get; set; }
 
     public bool isPublic{ get; set;}
@@ -60,6 +61,7 @@ namespace Ctest.Scenes
         //You cannot modify Scenes with SaveInDB cause it will raise a violed constraint Should use Upsert but does not be implemented yet
         dataBaseManager Data = new dataBaseManager(Constants.urlWithPort,Constants.database,Constants.adminName,Constants.password);
         Data.db.Insert<Scene>(this);
+        this.id=Data.db.Document<Scene>(this.address).id;
     }
 
     public override string ToString()

@@ -198,17 +198,3 @@ public class Edge_isIn : Edge
 
 
 }
-
-curl -X POST -u root:azertyuiop123 --data-binary @- --dump - http://localhost:8529/_db/test/_api/traversal <<EOF
-{ 
-  "startVertex" : "User/ange.crespo@hotmail.fr", 
-  "graphName" : "App", 
-  "direction" : "outbound",
-  "filter": "function (config, vertex, path) {if (vertex.name !== 'Bob') { return 'exclude';}}"
-}
-EOF
-
-curl -X POST -u root:azertyuiop123 --data-binary @- --dump - http://localhost:8529/_open/auth <<EOF
-{"username":"root","password":"azertyuiop123"}
-EOF
-

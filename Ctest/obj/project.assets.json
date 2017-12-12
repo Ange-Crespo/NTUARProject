@@ -345,6 +345,18 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "System/4.1.311.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "(, )"
+        },
+        "compile": {
+          "lib/net451/SXN.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net451/SXN.Core.dll": {}
+        }
+      },
       "System.Collections/4.0.11": {
         "type": "package",
         "dependencies": {
@@ -1817,6 +1829,17 @@
         "lib/netstandard1.0/_._",
         "runtime.native.system.security.cryptography.4.0.0.nupkg.sha512",
         "runtime.native.system.security.cryptography.nuspec"
+      ]
+    },
+    "System/4.1.311.2": {
+      "sha512": "P4cOoxreiNkBkP+Ir8W6GXxW2/5eneF9F1pAmTWHv3GEl1uLy65YDQAWfaLo4X5Tl+VFhl890dwD0exo+wzm8Q==",
+      "type": "package",
+      "path": "system/4.1.311.2",
+      "files": [
+        "lib/net451/SXN.Core.dll",
+        "lib/net451/SXN.Core.xml",
+        "system.4.1.311.2.nupkg.sha512",
+        "system.nuspec"
       ]
     },
     "System.Collections/4.0.11": {
@@ -4513,7 +4536,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "ArangoDB.Client >= 0.7.60",
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.NETCore.App >= 2.0.0",
+      "System >= 4.1.311.2"
     ]
   },
   "packageFolders": {
@@ -4523,11 +4547,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/crespo/Bureau/CTest/Ctest/Ctest.csproj",
+      "projectUniqueName": "/home/crespo/Bureau/CTest/NTUARProject/Ctest/Ctest.csproj",
       "projectName": "Ctest",
-      "projectPath": "/home/crespo/Bureau/CTest/Ctest/Ctest.csproj",
+      "projectPath": "/home/crespo/Bureau/CTest/NTUARProject/Ctest/Ctest.csproj",
       "packagesPath": "/home/crespo/.nuget/packages/",
-      "outputPath": "/home/crespo/Bureau/CTest/Ctest/obj/",
+      "outputPath": "/home/crespo/Bureau/CTest/NTUARProject/Ctest/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -4563,6 +4587,10 @@
           "ArangoDB.Client": {
             "target": "Package",
             "version": "0.7.60"
+          },
+          "System": {
+            "target": "Package",
+            "version": "4.1.0311.2"
           }
         },
         "imports": [
@@ -4572,5 +4600,27 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "System 4.1.311.2 does not provide an inclusive lower bound for dependency Newtonsoft.Json. An approximate best match of Newtonsoft.Json 3.5.8 was resolved.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System 4.1.311.2' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "System",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }

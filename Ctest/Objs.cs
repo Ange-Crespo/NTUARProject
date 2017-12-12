@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using ArangoDB.Client;
 using Ctest.DataBaseManagement;
@@ -52,12 +53,13 @@ namespace Ctest.Objs
     {   
         var list = new List<byte[]>();
         //Address http://localhost:8529/_db/test/test/provide-binary-file?path=/home/crespo/Bureau/db/OBJ/id/obj.OBJ
-        byte[] data_OBJ = DataBaseManagement.Ext.getOBSc(Constants.path_OBJ+"/"+this.address+"/obj."+Constants.typeOBJ);
+        Console.Write(Constants.path_OBJ+"/"+this.address+"/obj."+Constants.typeOBJ);
+        byte[] data_OBJ = DataBaseManagement.Ext.getOBSc(Constants.path_OBJ+this.address+"/obj."+Constants.typeOBJ);
         list.Add(data_OBJ);
         
         if(isTextured){
             //Address http://localhost:8529/_db/test/test/provide-binary-file?path=/home/crespo/Bureau/db/OBJ/id/texture.UNKNOWN
-            byte[] data_Texture = DataBaseManagement.Ext.getOBSc(Constants.path_OBJ+"/"+this.address+"/texture."+Constants.typeTexture);
+            byte[] data_Texture = DataBaseManagement.Ext.getOBSc(Constants.path_OBJ+this.address+"/texture."+Constants.typeTexture);
             list.Add(data_Texture);
         }
         return list;
@@ -68,6 +70,7 @@ namespace Ctest.Objs
             //You cannot modify OBJ with SaveInDB cause it will raise a violed constraint Should use Upsert but does not be implemented yet
             dataBaseManager Data = new dataBaseManager(Constants.urlWithPort,Constants.database,Constants.adminName,Constants.password);
             Data.db.Insert<OBJ>(this);
+            this.id=Data.db.Document<OBJ>(this.address).id;
         }
 
          public override string ToString()

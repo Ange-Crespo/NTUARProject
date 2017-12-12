@@ -1,14 +1,15 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "a3625baa36c95960c0163c1cbf4d55d20bb86247"
+    "signature": "34fa8bdf4c953e2e4398aa452286f53f964d1424"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Ctest/1.0.0": {
         "dependencies": {
-          "ArangoDB.Client": "0.7.60"
+          "ArangoDB.Client": "0.7.60",
+          "System": "4.1.311.2"
         },
         "runtime": {
           "Ctest.dll": {}
@@ -109,6 +110,14 @@
       "runtime.native.System.Security.Cryptography/4.0.0": {
         "dependencies": {
           "Microsoft.NETCore.Targets": "1.0.1"
+        }
+      },
+      "System/4.1.311.2": {
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "runtime": {
+          "lib/net451/SXN.Core.dll": {}
         }
       },
       "System.Collections/4.0.11": {
@@ -742,6 +751,13 @@
       "sha512": "sha512-2CQK0jmO6Eu7ZeMgD+LOFbNJSXHFVQbCJJkEyEwowh1SCgYnrn9W9RykMfpeeVGw7h4IBvYikzpGUlmZTUafJw==",
       "path": "runtime.native.system.security.cryptography/4.0.0",
       "hashPath": "runtime.native.system.security.cryptography.4.0.0.nupkg.sha512"
+    },
+    "System/4.1.311.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P4cOoxreiNkBkP+Ir8W6GXxW2/5eneF9F1pAmTWHv3GEl1uLy65YDQAWfaLo4X5Tl+VFhl890dwD0exo+wzm8Q==",
+      "path": "system/4.1.311.2",
+      "hashPath": "system.4.1.311.2.nupkg.sha512"
     },
     "System.Collections/4.0.11": {
       "type": "package",

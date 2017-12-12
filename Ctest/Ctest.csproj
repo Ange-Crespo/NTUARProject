@@ -5,7 +5,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ArangoDB.Client" Version="0.7.60" /> 
+    <PackageReference Include="ArangoDB.Client" Version="0.7.60" />
+    <PackageReference Include="System" Version="4.1.0311.2" /> 
   </ItemGroup>
  
 </Project>

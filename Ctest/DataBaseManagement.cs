@@ -13,7 +13,9 @@ namespace Ctest.DataBaseManagement
     public static class Ext{
 
         public static byte[] getOBSc(string url){
+            url = Constants.url_GET +"?path="+ url;
             Uri url_to_Reach = new Uri(url);
+            Console.WriteLine(url_to_Reach);
             using(WebClient client = new WebClient()) {
                 byte[] responseArray = client.DownloadData(url_to_Reach);
                 //Console.WriteLine("\nResponse Received.The contents of the file uploaded are:\n{0}",System.Text.Encoding.ASCII.GetString(responseArray));
@@ -53,6 +55,20 @@ namespace Ctest.DataBaseManagement
                     });
 
                 }
+
+        public void init(){
+            //this.db.CreateDatabase(Constants.database);
+            this.db.CreateCollection(Constants.UserCollectionName);
+            this.db.CreateCollection(Constants.OBJCollectionName);
+            this.db.CreateCollection(Constants.SceneCollectionName);
+            this.createEdge(Constants.Edge_Friend_Name);
+            this.createEdge(Constants.Edge_isIn_Name);
+            this.createEdge(Constants.Edge_ownOBJ_Name);
+            this.createEdge(Constants.Edge_ownScene_Name);
+            this.createEdge(Constants.Edge_shareOBJ_Name);
+            this.createEdge(Constants.Edge_shareScene_Name);
+            this.createGraph(Constants.GraphName);
+        }
         public void createDB(string name){
 
             this.connect();

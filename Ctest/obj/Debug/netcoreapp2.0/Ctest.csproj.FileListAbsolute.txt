@@ -8,3 +8,13 @@
 /home/crespo/Bureau/CTest/Ctest/obj/Debug/netcoreapp2.0/Ctest.AssemblyInfo.cs
 /home/crespo/Bureau/CTest/Ctest/obj/Debug/netcoreapp2.0/Ctest.dll
 /home/crespo/Bureau/CTest/Ctest/obj/Debug/netcoreapp2.0/Ctest.pdb
+/home/crespo/Bureau/CTest/NTUARProject/Ctest/bin/Debug/netcoreapp2.0/Ctest.deps.json
+/home/crespo/Bureau/CTest/NTUARProject/Ctest/bin/Debug/netcoreapp2.0/Ctest.runtimeconfig.json
+/home/crespo/Bureau/CTest/NTUARProject/Ctest/bin/Debug/netcoreapp2.0/Ctest.runtimeconfig.dev.json
+/home/crespo/Bureau/CTest/NTUARProject/Ctest/bin/Debug/netcoreapp2.0/Ctest.dll
+/home/crespo/Bureau/CTest/NTUARProject/Ctest/bin/Debug/netcoreapp2.0/Ctest.pdb
+/home/crespo/Bureau/CTest/NTUARProject/Ctest/obj/Debug/netcoreapp2.0/Ctest.csproj.CoreCompileInputs.cache
+/home/crespo/Bureau/CTest/NTUARProject/Ctest/obj/Debug/netcoreapp2.0/Ctest.AssemblyInfoInputs.cache
+/home/crespo/Bureau/CTest/NTUARProject/Ctest/obj/Debug/netcoreapp2.0/Ctest.AssemblyInfo.cs
+/home/crespo/Bureau/CTest/NTUARProject/Ctest/obj/Debug/netcoreapp2.0/Ctest.dll
+/home/crespo/Bureau/CTest/NTUARProject/Ctest/obj/Debug/netcoreapp2.0/Ctest.pdb

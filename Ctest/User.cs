@@ -138,7 +138,8 @@ namespace Ctest.Users
             //You cannot modify User with SaveInDB cause it will raise a violed constraint Should use Upsert but does not be implemented yet
             //After implemented with upsert the issue is to not erase a user when an other want to use the same email address !!!
             dataBaseManager Data = new dataBaseManager(Constants.urlWithPort,Constants.database,Constants.adminName,Constants.password);
-            Data.db.Insert<User>(this);  
+            Data.db.Insert<User>(this);
+            this.id=Data.db.Document<User>(this.emailAddress).id;
         }
 
         public List<User> getFriend()
